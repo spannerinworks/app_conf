@@ -24,7 +24,7 @@ Or even smashing it into the Rails application config:
 
 ```
 MyRailsApp::Application.configure do
-  config.my_rails_app = Configurator.new(YAML.load_file(Rails.root.join('config', 'application.yml'))[Rails.env])
+  config.my_rails_app = AppConf::Configurator.new(YAML.load_file(Rails.root.join('config', 'application.yml'))[Rails.env])
 end
 
 Rails.configuration.my_rails_app.some_config
